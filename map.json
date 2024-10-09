@@ -1,9 +1,0 @@
-{
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "data": {
-      "url": "./EnergyEfficiencyConcessionAreas_GDA94.geojson",
-      "format": {"type": "json"}
-    },
-    "mark": "circle",
-    "projection": {"type": "equalEarth"}
-  }
