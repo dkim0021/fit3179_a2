@@ -5,10 +5,10 @@
     "layer": [
         {
         "data": {
-            "url": "https://dkim0021.github.io/fit3179_a2/data/georef-australia-state.json",
+            "url": "../data/world_map_data.json",
             "format": {
                 "type": "json",
-                "property": "georef-australia-state"
+                "property": "world_map_data"
             }
         },
         "mark": {
@@ -17,10 +17,7 @@
             "stroke": "white"
         },
         "projection": {
-            "type": "mercator",
-            "center": [133.7751, -28.2744], 
-            "scale": 650,  
-            "translate": [400, 300]
+            "type": "equalEarth"
         }
         }
     ]

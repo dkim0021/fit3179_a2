@@ -1,0 +1,27 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 600,
+    "layer": [
+        {
+        "data": {
+            "url": "../data/australia_map_data.json",
+            "format": {
+                "type": "json",
+                "property": "georef-australia-state"
+            }
+        },
+        "mark": {
+            "type": "geoshape",
+            "fill": "lightgray",
+            "stroke": "white"
+        },
+        "projection": {
+            "type": "mercator",
+            "center": [133.7751, -28.2744], 
+            "scale": 650,  
+            "translate": [400, 300]
+        }
+        }
+    ]
+}
