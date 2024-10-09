@@ -5,7 +5,7 @@
     "layer": [
         {
         "data": {
-            "url": "./georef-australia-state.json",
+            "url": "https://dkim0021.github.io/fit3179_a2/data/georef-australia-state.json",
             "format": {
                 "type": "json",
                 "property": "georef-australia-state"
@@ -18,8 +18,8 @@
         },
         "projection": {
             "type": "mercator",
-            "center": [133.7751, -25.2744], 
-            "scale": 700,  
+            "center": [133.7751, -28.2744], 
+            "scale": 650,  
             "translate": [400, 300]
         }
         }
