@@ -6,29 +6,33 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.8"></script>
 </head>
 <body>
-  <div id="vis">
-    <script>
-        fetch('../vega-lite/world_map.vl')
-        .then(response => response.json())
-        .then(spec => {
-            vegaEmbed("#vis", spec, {mode: "vega-lite"}).then(console.log).catch(console.warn);
-        })
-        .catch(error => {
-            console.error('Error loading the JSON spec:', error);
-        });
-    </script>
+  <div class="visualisation-container">
+    <div id="vis1" class="vis"></div>
+    <div id="vis2" class="vis"></div>
   </div>
-  <div id="vis">
-    <script>
-        fetch('../vega-lite/australia_map.vl')
-        .then(response => response.json())
-        .then(spec => {
-            vegaEmbed("#vis", spec, {mode: "vega-lite"}).then(console.log).catch(console.warn);
-        })
-        .catch(error => {
-            console.error('Error loading the JSON spec:', error);
-        });
-    </script>
-  </div>
+
+  <script>
+    // Fetch the first Vega-Lite spec (world map)
+    fetch('../vega-lite/world_map.vl')
+      .then(response => response.json())  // Parse JSON from the response
+      .then(spec1 => {
+        // Embed the first visualization in the div with id 'vis1'
+        vegaEmbed("#vis1", spec1, {mode: "vega-lite"}).then(console.log).catch(console.warn);
+      })
+      .catch(error => {
+        console.error('Error loading the world map JSON spec:', error);
+      });
+
+    // Fetch the second Vega-Lite spec (Australia map)
+    fetch('../vega-lite/australia_map.vl')
+      .then(response => response.json())  // Parse JSON from the response
+      .then(spec2 => {
+        // Embed the second visualization in the div with id 'vis2'
+        vegaEmbed("#vis2", spec2, {mode: "vega-lite"}).then(console.log).catch(console.warn);
+      })
+      .catch(error => {
+        console.error('Error loading the Australia map JSON spec:', error);
+      });
+  </script>
 </body>
 </html>
