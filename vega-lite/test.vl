@@ -3,7 +3,7 @@
     "width": 800,
     "height": 600,
     "data": {
-      "url": "https://raw.githubusercontent.com/cartdeco/Australia-json-data/master/ABS_GCCSA_2011.json",
+      "url": "https://raw.githubusercontent.com/dkim0021/fit3179_a2/refs/heads/main/data/naturalearthdata_10m_australia.json",
       "format": {
         "type": "json",
         "property": "features"
