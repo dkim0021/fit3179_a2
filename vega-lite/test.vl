@@ -1,0 +1,58 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 600,
+    "data": {
+      "url": "https://raw.githubusercontent.com/cartdeco/Australia-json-data/master/ABS_GCCSA_2011.json",
+      "format": {
+        "type": "json",
+        "property": "features"
+      }
+    },
+    "projection": {
+      "type": "mercator",
+      "center": [133.7751, -28.2744],
+      "scale": 650,
+      "translate": [400, 300]
+    },
+    "layer": [
+      {
+        "mark": {
+          "type": "geoshape",
+          "fill": "lightgray",
+          "stroke": "white"
+        },
+        "encoding": {
+          "tooltip": {"field": "properties.NAME", "type": "nominal"}
+        }
+      },
+      {
+        "mark": {
+          "type": "geoshape",
+          "stroke": "blue",
+          "strokeWidth": 2
+        },
+        "encoding": {
+          "color": {
+            "condition": {
+              "param": "highlight", 
+              "value": "steelblue"
+            },
+            "value": "lightgray"
+          }
+        },
+        "params": [
+          {
+            "name": "highlight",
+            "select": {
+              "type": "point",
+              "on": "mouseover",
+              "fields": ["properties.NAME"],
+              "clear": "mouseout"
+            }
+          }
+        ]
+      }
+    ]
+  }
+  
