@@ -1,9 +1,13 @@
-Country Name,Country Code,Series Name,Series Code,2023
-United States of America,USA,GDP (current LCU),NY.GDP.MKTP.CN,2.73609E+13
-China,CHN,GDP (current LCU),NY.GDP.MKTP.CN,1.26058E+14
-Germany,DEU,GDP (current LCU),NY.GDP.MKTP.CN,4.12116E+12
-United Kingdom,GBR,GDP (current LCU),NY.GDP.MKTP.CN,2.68719E+12
-India,IND,GDP (current LCU),NY.GDP.MKTP.CN,2.93897E+14
-Russian Federation,RUS,GDP (current LCU),NY.GDP.MKTP.CN,1.72148E+14
-Australia,AUS,GDP (current LCU),NY.GDP.MKTP.CN,2.56123E+12
-South Korea,KOR,GDP (current LCU),NY.GDP.MKTP.CN,2.24E+15
+Country Name,Country Code,Series Name,Series Code,2023 [YR2023]
+United Kingdom,GBR,GDP (current US$),NY.GDP.MKTP.CD,3.34003E+12
+United States,USA,GDP (current US$),NY.GDP.MKTP.CD,2.73609E+13
+United Arab Emirates,ARE,GDP (current US$),NY.GDP.MKTP.CD,5.04173E+11
+Germany,DEU,GDP (current US$),NY.GDP.MKTP.CD,4.45608E+12
+China,CHN,GDP (current US$),NY.GDP.MKTP.CD,1.77948E+13
+India,IND,GDP (current US$),NY.GDP.MKTP.CD,3.54992E+12
+Russia,RUS,GDP (current US$),NY.GDP.MKTP.CD,2.02142E+12
+Australia,AUS,GDP (current US$),NY.GDP.MKTP.CD,1.72383E+12
+South Korea,KOR,GDP (current US$),NY.GDP.MKTP.CD,1.71279E+12
+South Africa,ZAF,GDP (current US$),NY.GDP.MKTP.CD,3.77782E+11
+Egypt,EGY,GDP (current US$),NY.GDP.MKTP.CD,3.95926E+11
+Brazil,BRA,GDP (current US$),NY.GDP.MKTP.CD,2.17367E+12
