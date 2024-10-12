@@ -9,11 +9,12 @@
   <h1>Economics of Australia</h1>
   <div class="visualisation-container">
     <div id="vis1" class="vis"></div>
+    <br>
     <div id="vis2" class="vis"></div>
   </div>
   <script>
     // Fetch the first Vega-Lite spec (world map)
-    fetch('../vega-lite/test.vl') // fetch('../vega-lite/world_map.vl')
+    fetch('../vega-lite/world_map.vl') // fetch('../vega-lite/world_map.vl')
       .then(response => response.json())  // Parse JSON from the response
       .then(spec1 => {
         // Embed the first visualization in the div with id 'vis1'
