@@ -1,11 +1,11 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 800,
-    "height": 600,
+    "width": 450,
+    "height": 400,
     "layer": [
         {
             "data": {
-                "url": "https://raw.githubusercontent.com/dkim0021/fit3179_a2/refs/heads/main/data/ecodata/australia_map_data.json",
+                "url": "https://raw.githubusercontent.com/dkim0021/fit3179_a2/refs/heads/main/data/geodata/australia_map_data.json",
                 "format": {
                     "type": "json",
                     "property": "georef-australia-state"
@@ -18,8 +18,8 @@
             },
             "projection": {
                 "type": "mercator",
-                "center": [133.7751, -28.2744], 
-                "scale": 650,  
+                "center": [151.3751, -36.2744], 
+                "scale": 550,  
                 "translate": [400, 300]
             }
         }
