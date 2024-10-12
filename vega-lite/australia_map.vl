@@ -5,7 +5,7 @@
     "layer": [
         {
             "data": {
-                "url": "../data/australia_map_data.json",
+                "url": "https://raw.githubusercontent.com/dkim0021/fit3179_a2/refs/heads/main/data/australia_map_data.json",
                 "format": {
                     "type": "json",
                     "property": "georef-australia-state"
