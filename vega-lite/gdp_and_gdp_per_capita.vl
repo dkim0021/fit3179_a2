@@ -1,0 +1,55 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/dkim0021/fit3179_a2/refs/heads/main/data/ecodata/world_country_gdp_v2.csv",
+      "format": {"type": "csv"}
+    },
+    "params": [
+      {
+        "name": "Metric",
+        "value": "GDP",
+        "bind": {
+          "input": "select",
+          "options": ["GDP", "GDP per capita"],
+          "labels": ["GDP (trillions USD)", "GDP per capita (USD)"]
+        }
+      }
+    ],
+    "transform": [
+      {
+        "calculate": "Metric === 'GDP' ? 'GDP (trillions USD)' : 'GDP per capita (USD)'",
+        "as": "Metric"
+      },
+      {
+        "calculate": "Metric === 'GDP' ? datum['2023'] / 1e12 : Metric === 'GDP per capita' && datum['Series Name'] === 'GDP per capita (current US$)' ? datum['2023'] : null",
+        "as": "Value"
+      }
+    ],
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "Country Name",
+        "type": "nominal",
+        "title": "Country",
+        "sort": {"field": "Value", "order": "descending"}
+      },
+      "y": {
+        "field": "Value",
+        "type": "quantitative",
+        "title": "Value"
+      },
+      "color": {
+        "condition": {
+          "test": "datum['Country Name'] === 'Australia'",
+          "value": "#ff9e4d"
+        },
+        "value": "#d3d3d3"
+      }
+    },
+  "title": {
+    "text": {
+      "expr": "Metric === 'GDP' ? 'GDP (trillions USD)' : 'GDP per capita (USD)'"
+    }
+  }
+  }
+  
