@@ -1,0 +1,33 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width":600,
+  "height":200,
+  "data": {
+    "url": "https://raw.githubusercontent.com/dkim0021/fit3179_a2/refs/heads/main/data/ecodata/world_country_gdp.csv",
+    "format": {"type": "csv"}
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Country Name", 
+      "type": "nominal", 
+      "title": "Country",
+      "sort": "-y"
+    },
+    "y": {
+      "field": "2023", 
+      "type": "quantitative", 
+      "title": "GDP (in trillions US$)",
+      "axis": {
+        "labelExpr": "datum.value / 1e12"
+      }
+    },
+    "color": {
+      "condition": {
+        "test": "datum['Country Name'] === 'Australia'", 
+        "value": "#ff9e4d"  
+      },
+      "value": "#d3d3d3"
+    }
+  }
+}

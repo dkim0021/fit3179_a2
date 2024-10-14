@@ -1,6 +1,15 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": "Australia Economic Development Indicators",
+      "fontSize": 18,
+      "color": "black",
+      "fontWeight": "bold",
+      "anchor": "middle"
+    },
     "description": "A line chart showing various time series for each unique Series Name in the dataset.",
+    "width": 800,
+    "height": 400,
     "data": {
       "url": "https://raw.githubusercontent.com/dkim0021/fit3179_a2/refs/heads/main/data/ecodata/aus_eco_data.csv",
       "format": {"type": "csv"}
@@ -22,7 +31,7 @@
         "as": ["Year", "Value"]
       },
       {
-        "filter": "datum['Series Name'] !== 'GDP (current LCU)' && datum['Series Name'] !== 'GDP per capita (current LCU)'"
+        "filter": "datum['Series Name'] !== 'GDP (current LCU)' && datum['Series Name'] !== 'GDP per capita (current LCU)' && datum['Series Name'] !== 'S&P Global Equity Indices (annual % change)'"
       }
     ],
     "mark": "line",
