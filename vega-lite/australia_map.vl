@@ -8,20 +8,43 @@
                 "url": "https://raw.githubusercontent.com/dkim0021/fit3179_a2/refs/heads/main/data/geodata/australian-states.json",
                 "format": {
                     "type": "json",
-                    "property": "georef-australia-state"
+                    "property": "features"
                 }
             },
             "mark": {
                 "type": "geoshape",
-                "fill": "lightgray",
                 "stroke": "white"
             },
             "projection": {
                 "type": "mercator",
-                "center": [151.3751, -36.2744], 
-                "scale": 550,  
+                "center": [151.3751, -36.2744],
+                "scale": 550,
                 "translate": [400, 300]
-            }
+            },
+            "encoding": {
+                "color": {
+                    "field": "Mean Weekly Earnings",
+                    "type": "quantitative",
+                    "legend": {"title": "Mean Weekly Earnings"},
+                    "scale": {"scheme": "blues"}
+                },
+                "tooltip": [
+                    {"field": "properties.STATE_NAME", "title": "State", "type": "nominal"},
+                    {"field": "Mean Weekly Earnings", "title": "Mean Weekly Earnings", "type": "quantitative"}
+                ]
+            },
+            "transform": [
+                {
+                    "lookup": "properties.STATE_NAME",
+                    "from": {
+                        "data": {
+                            "url": "https://raw.githubusercontent.com/dkim0021/fit3179_a2/refs/heads/main/data/ecodata/weekly_earnings.csv"
+                        },
+                        "key": "State",
+                        "fields": ["Mean Weekly Earnings"]
+                    }
+                }
+            ]
         }
     ]
 }
