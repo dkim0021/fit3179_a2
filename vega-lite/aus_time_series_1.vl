@@ -8,8 +8,8 @@
       "anchor": "middle"
     },
     "description": "A line chart showing various time series for each unique Series Name in the dataset.",
-    "width": 800,
-    "height": 400,
+    "width": 500,
+    "height": 390,
     "data": {
       "url": "https://raw.githubusercontent.com/dkim0021/fit3179_a2/refs/heads/main/data/ecodata/aus_eco_data.csv",
       "format": {"type": "csv"}

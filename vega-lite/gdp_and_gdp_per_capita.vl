@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 350,
-    "height": 246.6,
+    "width": 650,
+    "height": 350,
     "data": {
       "url": "https://raw.githubusercontent.com/dkim0021/fit3179_a2/refs/heads/main/data/ecodata/world_country_gdp_v2.csv",
       "format": {"type": "csv"}

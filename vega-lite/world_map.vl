@@ -4,8 +4,8 @@
     "type": "fit",
     "resize": true
   },
-  "width": 1150,  
-  "height": 500, 
+  "width": 800,  
+  "height": 450, 
   "data": {
     "url": "https://raw.githubusercontent.com/dkim0021/fit3179_a2/refs/heads/main/data/geodata/ne_110m_admin_0_countries.topojson",
     "format": { "type": "topojson", "feature": "ne_110m_admin_0_countries" }
