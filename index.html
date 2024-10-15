@@ -111,25 +111,25 @@
 
     <script>
         // World Map
-        fetch('../vega-lite/world_map.vl')
+        fetch('https://raw.githubusercontent.com/dkim0021/fit3179_a2/refs/heads/main/vega-lite/world_map.vl')
             .then(response => response.json())
             .then(spec1 => {vegaEmbed("#vis1", spec1, { mode: "vega-lite" }).then(console.log).catch(console.warn);})
             .catch(error => {console.error(error);});
 
         // GDP Ranking by Country
-        fetch('../vega-lite/gdp_and_gdp_per_capita.vl')
+        fetch('https://raw.githubusercontent.com/dkim0021/fit3179_a2/refs/heads/main/vega-lite/gdp_and_gdp_per_capita.vl')
             .then(response => response.json())
             .then(spec2 => {vegaEmbed("#vis2", spec2, { mode: "vega-lite" }).then(console.log).catch(console.warn);})
             .catch(error => {console.error(error);});
 
         // Australia's Economic Landscape
-        fetch('../vega-lite/australia_map.vl')
+        fetch('https://raw.githubusercontent.com/dkim0021/fit3179_a2/refs/heads/main/vega-lite/australia_map.vl')
             .then(response => response.json())
             .then(spec3 => {vegaEmbed("#vis3", spec3, { mode: "vega-lite" }).then(console.log).catch(console.warn);})
             .catch(error => {console.error(error);});
 
         // Economic Trends Over Time
-        fetch('../vega-lite/aus_time_series_1.vl')
+        fetch('https://raw.githubusercontent.com/dkim0021/fit3179_a2/refs/heads/main/vega-lite/aus_time_series_1.vl')
             .then(response => response.json())
             .then(spec4 => {vegaEmbed("#vis4", spec4, { mode: "vega-lite" }).then(console.log).catch(console.warn);})
             .catch(error => {console.error(error);});
