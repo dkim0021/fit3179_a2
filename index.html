@@ -9,26 +9,28 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.8"></script>
     <style>
+        /* setting font for entire html file*/
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 20px;
         }
-
+        /* setting heading style */ 
         h1 {
             text-align: center;
             color: #333;
             margin-bottom: 40px;
         }
-
-        .visualisation-container {
+        /* creating overall container for everything... */
+        .vis-container {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 60px;
         }
-
+        
+        /* defines rows within container */
         .vis-row {
             display: flex;
             align-items: center;
@@ -37,18 +39,7 @@
             max-width: 1400px;
         }
 
-        .vis-row.alternate {
-            flex-direction: row-reverse;
-        }
-
-        .vis-description {
-            width: 35%; 
-            padding: 20px;
-            font-size: 18px;
-            color: #666;
-            line-height: 1.5;
-        }
-
+        /* adding pretty elements and borders to clean things up */ 
         .vis {
             border: 1px solid #ccc;
             border-radius: 8px;
@@ -59,30 +50,10 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
-        #vis1 {
-            height: 600px;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 14px;
-            color: #999;
-        }
-
         @media screen and (max-width: 768px) {
             .vis-row {
                 flex-direction: column;
                 align-items: center;
-            }
-
-            .vis {
-                width: 100%;
-            }
-
-            .vis-description {
-                width: 100%;
-                text-align: center;
             }
         }
     </style>
@@ -92,7 +63,7 @@
 
     <h1>Economics of Australia</h1>
 
-    <div class="visualisation-container">
+    <div class="vis-container">
 
         <!-- World Map -->
         <div class="vis-row">
@@ -105,7 +76,7 @@
         </div>
 
         <!-- GDP Ranking by Country -->
-        <div class="vis-row alternate">
+        <div class="vis-row">
             <div class="vis-description">
                 <strong>GDP Ranking by Country</strong><br>
                 This chart ranks countries by their Gross Domestic Product (GDP) and GDP per capita.
@@ -127,7 +98,7 @@
         </div>
 
         <!-- Time Series -->
-        <div class="vis-row alternate">
+        <div class="vis-row">
             <div class="vis-description">
                 <strong>Economic Trends Over Time</strong><br>
                 This time series analysis visualises Australia's economic trends over recent years, including GDP growth, inflation rates, and other key economic indicators.
@@ -142,42 +113,27 @@
         // World Map
         fetch('../vega-lite/world_map.vl')
             .then(response => response.json())
-            .then(spec1 => {
-                vegaEmbed("#vis1", spec1, { mode: "vega-lite" }).then(console.log).catch(console.warn);
-            })
-            .catch(error => {
-                console.error(error);
-            });
+            .then(spec1 => {vegaEmbed("#vis1", spec1, { mode: "vega-lite" }).then(console.log).catch(console.warn);})
+            .catch(error => {console.error(error);});
 
         // GDP Ranking by Country
         fetch('../vega-lite/gdp_and_gdp_per_capita.vl')
             .then(response => response.json())
-            .then(spec2 => {
-                vegaEmbed("#vis2", spec2, { mode: "vega-lite" }).then(console.log).catch(console.warn);
-            })
-            .catch(error => {
-                console.error(error);
-            });
+            .then(spec2 => {vegaEmbed("#vis2", spec2, { mode: "vega-lite" }).then(console.log).catch(console.warn);})
+            .catch(error => {console.error(error);});
 
         // Australia's Economic Landscape
         fetch('../vega-lite/australia_map.vl')
             .then(response => response.json())
-            .then(spec3 => {
-                vegaEmbed("#vis3", spec3, { mode: "vega-lite" }).then(console.log).catch(console.warn);
-            })
-            .catch(error => {
-                console.error(error);
-            });
+            .then(spec3 => {vegaEmbed("#vis3", spec3, { mode: "vega-lite" }).then(console.log).catch(console.warn);})
+            .catch(error => {console.error(error);});
 
         // Economic Trends Over Time
         fetch('../vega-lite/aus_time_series_1.vl')
             .then(response => response.json())
-            .then(spec4 => {
-                vegaEmbed("#vis4", spec4, { mode: "vega-lite" }).then(console.log).catch(console.warn);
-            })
-            .catch(error => {
-                console.error(error);
-            });
+            .then(spec4 => {vegaEmbed("#vis4", spec4, { mode: "vega-lite" }).then(console.log).catch(console.warn);})
+            .catch(error => {console.error(error);});
+
     </script>
 
 </body>
